@@ -1,0 +1,53 @@
+import random 
+words=["anger","apple","brain","bread","chair","child","class","clock","dream","dress","drive","earth","enemy","event",
+"final","focus","force","grass","green","heart","house","image","input","judge","knife","level","light","lunch","money",
+"night","north","order","other","paper","plane","power","queen","reply","right","river","shape","shirt","sleep",
+"table","trade","unity","value","video","whole","world"]
+i=random.randint(0,49)
+w=words[i]
+t=True
+for m in range (6): #first while loop to take repeated inputs incase the world is wrong
+    while t: #so that user only gives a five letter word
+        a=str(input("Enter a five-letter word as your guess:"))
+        space=["-","-","-","-","-"]
+        if len(a)==5:
+            t=False
+        else:
+            print("Only five lettered words allowed")
+    l=[] #letters in correct places
+    l1=[] #letters in the word
+    l2=[x for x in w] 
+    l3=[x for x in w] 
+    if a!=w:
+        for i in range (5):
+            if a[i]==w[i]:
+                l.append(a[i])
+                l2.remove(a[i])
+                space[i]=a[i]
+        for i in range (5):
+            if a[i] in w and a[i] in l2 and a[i] in l3 :
+                l1.append(a[i])
+                l3.remove(a[i])
+
+        print("letters in correct places:",end=" ")
+        for k in space:
+            print(k,end="")
+        print()
+
+        print("letters in word but not in correct places:",end=" ")
+        for k in l1:
+            print(k,end=",")
+        print()
+
+        print("Chances remaining",(5-m))
+        t=True
+    elif a==w:
+        print("correct word")
+        break
+    if m==5:
+            print("You lose")
+            print("Correct word was :", w)
+            break
+    
+        
+
