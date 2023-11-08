@@ -1,0 +1,4 @@
+url01,0.5: url02 url03 url04 url02 
+url02,0.4: url01 url03 
+url03,0.2: url02 url04 
+url04,0.7: url01 url03 url02
