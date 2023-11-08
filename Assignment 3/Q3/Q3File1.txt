@@ -1,0 +1,8 @@
+After a splendid and speedy evaluation of the Assignment submissions, your Instructor further
+piles more work on you. They ask you to check for plagiarism in the student’s submissions by
+looking at the similarity between their submissions.
+
+Using the data of unique words and the total words of each submission, calculate the similarity
+score of each submission with every other submission, and if the similarity score exceeds
+50%, then write the name of the submission file that is being evaluated for plagiarism, along with the name of the file with which plagiarism had been detected, and the similarity score
+between them.
