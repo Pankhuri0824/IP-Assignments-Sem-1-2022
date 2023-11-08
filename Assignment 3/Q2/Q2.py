@@ -1,3 +1,7 @@
+##CREATE OUTPUT FILES BEFORE RUNNING THE CODE
+##Q2Output1.txt
+##Q2Output2.txt
+
 d={}
 file=open("./Q2.txt")
 
